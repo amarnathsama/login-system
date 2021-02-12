@@ -1,0 +1,22 @@
+<h1>Login</h1>
+<form action ="/login" method="POST">
+    <!-- <p> Express-Flash Demo </p>     -->
+    <% if ( expressFlash.length > 0 ) { %>
+    <p><%= expressFlash %> </p>
+    <% } %>
+    <% if (messages.error) { %>
+        <%= messages.error %>
+      <% } %>
+    <div>
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username"required>
+    </div>
+
+    <div>
+        <label for="password">Password</label>
+        <input type="text" id="password" name="password"required>
+    </div>
+
+    <button type="submit">Register</button>
+</form>
+<a href="/register">Register</a>
